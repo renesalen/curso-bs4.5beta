@@ -14,6 +14,7 @@
   <!-- Estilos css -->
   <style >
     .fondo{background: blue;}
+    .borde{border: #000 solid;}
   </style>
   <nav class="navbar navbar-expand-md navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
@@ -46,9 +47,16 @@
   <h1>Version Beta</h1>
   <h2>Grid System</h2>
   <p><strong>navbar-expand-md</strong> la md determina que el menu en modo pc se va ver a partir de la pantalla md hacia más grande. En pantallas menores a md se va ha ver solo el Icono sandwich</p>
-
+  <p>con <strong>col</strong> flexbox lanzará columnas con el mismo tamaño</p>
   <div class="container fondo">
     <p>Pretexto</p>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col borde">1</div>
+      <div class="col borde">2</div>
+      <div class="col borde">3</div>
+    </div>
   </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
