@@ -48,6 +48,10 @@
   <h2>Grid System</h2>
   <p><strong>navbar-expand-md</strong> la md determina que el menu en modo pc se va ver a partir de la pantalla md hacia más grande. En pantallas menores a md se va ha ver solo el Icono sandwich</p>
   <p>con <strong>col</strong> flexbox lanzará columnas con el mismo tamaño</p>
+  <p>Pero esta division de columnas pernenerá igual en cualquier tamaño de pantalla, es decir No es Responsive</p>
+  <p>Puntos de Rotura <strong><576/>=576/>=768/>=992/>=1200</strong></p>
+  <p>En pantallas menores a 576px bs le quita los márgenes por defecto</p>
+
   <div class="container fondo">
     <p>Pretexto</p>
   </div>
@@ -58,6 +62,57 @@
       <div class="col-4 borde">3</div>
     </div>
   </div>
+  <hr>
+  <p>1 Resolucion (por defecto)columnas solamente con col</p>
+  <div class="container">
+    <div class="row">
+      <div class="col borde">1</div>
+      <div class="col borde">2</div>
+      <div class="col borde">3</div>
+    </div>
+  </div>
+  <hr>
+  <p>Columnas en tamaño sm</p>
+  <p>Se ponen en varias filas, cada elemento ocupa todo el ancho de pantalla</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm borde">1</div>
+      <div class="col-sm borde">2</div>
+      <div class="col-sm borde">3</div>
+    </div>
+  </div>
+  <hr>
+  <p>2 ResolucionesColumnas con tamaño especifico desde sm hacia arriba</p>
+  <p>Las coumnas se distribuyen con tamaño específico a partir de sm hacia arriba, pero no afectan a xs que por defecto se sobreponen</p>
+  <p>Desde 576px (sm) la ultima columna se pone en otra fila porque la suma de las anteriores es 12 y además la 3ra columna tiene un ancho de 12</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 borde">1</div>
+      <div class="col-sm-6 borde">2</div>
+      <div class="col-sm-12 borde">3</div>
+    </div>
+  </div>
+  <hr>
+  <p>3 Resoluciones. Agregando otro tamaño de columnas en el tamaño md (769 - 992)</p>
+  <p>Esta 3ra distribucion es partir del tamaño mediano (md) de la pantalla hacia arriba</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-3 borde">1</div>
+      <div class="col-sm-6 col-md-6 borde">2</div>
+      <div class="col-sm-12 col-md-3 borde">3</div>
+    </div>
+  </div>
+  <hr>
+  <p>4 Resoluciones. Le asignamos valores en tamaño lg</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-3 col-lg-2 borde">1</div>
+      <div class="col-sm-6 col-md-6 col-lg-1 borde">2</div>
+      <div class="col-sm-12 col-md-3 col-lg-9 borde">3</div>
+    </div>
+  </div>
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
